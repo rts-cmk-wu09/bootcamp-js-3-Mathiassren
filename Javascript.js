@@ -6,9 +6,9 @@ links.forEach((link, index) => {
   link.addEventListener("click", e => {
     e.preventDefault();
     fetch(pages[index])
-      .then(res => res.text())
-      .then(html => {
-        main.innerHTML = html;
+      .then(response => response.text())
+      .then(data => {
+        main.innerHTML = data;
       });
   });
 });
